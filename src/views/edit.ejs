@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+    <style>
+     .nav{
+      margin-left: 700px;
+    } 
+    .navbar-nav li a {
+      color: black;
+      /* margin: left 400px; */
+      background-color:  rgb(76, 175, 150)
+      ;
+      
+    }
+    .navrow{
+  background-color: rgb(76, 175, 150)
+}
+        .card {
+  margin-bottom: 20px;
+}
+.card-img-top {
+  width: 300px;
+  height: 300px;
+  align-self: center;
+}
+    </style>
+</head>
+
+<body>
+  <%-include('includes/_header')%>
+    <div class="container">
+        <div class="row">
+            <form action="/update/<%=item._id%>" method="post">
+          <div class="col">
+            <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src="/images/<%=item.img%>" alt="Card image cap" name="img">
+      <div class="card-block">
+        <input type="text" class="card-title" value="<%=item.pname%>"name="pname">
+        <input type="text" class="card-text" value="<%=item.price%>"name="price">
+        <!-- <label>Quantity</label><input type="number" min="1" id="qnty" name="qty"> -->
+        <!-- <input type="submit" value="Add to Cart" class="add-to-cart btn btn-primary btn-block/"> -->
+        <!-- <a href="" class="add-to-cart btn btn-primary btn-block">EDIT</a>
+        <a href="#" class="add-to-cart btn btn-primary btn-block">Delete</a> -->
+        <input type="submit" value="UPDATE"class="add-to-cart btn btn-primary btn-block">
+      </div>
+    </div>
+          </div>
+        </div>
+           </div>
+        </form>
+
+           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+           integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+           crossorigin="anonymous"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+           integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+           crossorigin="anonymous"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+           integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+           crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        
+    .h1{
+        text-align: center;
+    }
+    .txt{
+        height: 50px;
+        width: 100%;
+    }
+    .file{
+        margin-top: 19px;
+    width: 40%;
+    margin-left: 480px;
+    }
+    </style>
+</head>
+<body>
+   <div class="container" >
+       <div class="row">
+           <form action="/add" method="post">
+           <h1 class="h1">ADD ITEM</h1>
+    
+       <div class="row"><label>Name</label><br><input type="text" class="txt" name="pname"/></div>
+       <div class="row"><label>Price</label><br><input type="text" class="txt" name="price"/></div>
+       
+      <div class="row"> <input class="form-control form-control-sm file" id="formFileSm" type="file" name="img" /></div>
+      <div class="row"><input type="submit"/></div></form>
+   </div>
+   </div>
+</body>
+</html>
